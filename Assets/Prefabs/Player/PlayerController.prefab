@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 696762971032842897}
   - component: {fileID: 6476046274628137876}
   - component: {fileID: 2772978872962215347}
-  - component: {fileID: 8153590508118212093}
-  - component: {fileID: 3364462147909459825}
   - component: {fileID: 7459344194030298198}
+  - component: {fileID: 1143716343384320041}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -98,7 +97,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5236742366333252659}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ec089799af8df8040b29d8e8566bb80b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -114,48 +113,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &8153590508118212093
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5236742366333252659}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
---- !u!114 &3364462147909459825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5236742366333252659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad994ec83c695e340986c2ca4c7e4ab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  gravity: -9.81
-  jumpHeight: 2
 --- !u!143 &7459344194030298198
 CharacterController:
   m_ObjectHideFlags: 0
@@ -179,8 +136,30 @@ CharacterController:
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
+  m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1143716343384320041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5236742366333252659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad994ec83c695e340986c2ca4c7e4ab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AirControl: 0.7
+  moveSpeed: 1
+  gravity: -11.5
+  jumpHeight: 2
+  mouseSensitivity: 0.12
+  movementSmoothTime: 1
+  DashCharges: 2
+  DashRecharge: 1
+  moveDirection: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
 --- !u!1 &9181465906824173702
 GameObject:
   m_ObjectHideFlags: 0
